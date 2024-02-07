@@ -14,23 +14,26 @@
    </div>
    <label class="font-bold mx-3 my-6">name of the pizza</label><br>
    <div class="w-auto bg-stone-200 mx-3 rounded-md my-6 px-5 py-7 items-center border border-black">
-    <span  class=""></span>
+    <input type="text" id="input">
     
    </div>
-   <button class="bg-orange-500 m-10  px-7   py-3 rounded-md float-right text-white font-bold items-center" onclick="pushitem()">Add todo</button>
+   <button class="bg-orange-500 m-10  px-7   py-3 rounded-md float-right text-white font-bold items-center"  id="btn">Add todo</button>
 </body>
 
 
 <script>
-    function pushitem(){
-        let item =""
+    const input=document.getElementById("input")
+    const btn=document.getElementById("btn")
+     
+    const arr=[];
 
-        let i=document.getElementById("input1").value
+    btn.addEventListener("click", ()=>{
+          
+        arr.push(input.value)
+        console.log(arr)
+    })
 
 
-
-
-
-    }
+    
 </script>
 </html>
